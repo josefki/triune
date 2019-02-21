@@ -1,0 +1,145 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+}
+#header{
+	width: 100%;	
+}
+#header .top-bar{
+	height: 100px;
+}
+.top-bar h1{
+	position: absolute;
+	left: 4%;
+	top: 5%;
+	font-family: permanent marker ;
+	text-transform: uppercase;
+}
+#carousel{ 
+	width: 65%;
+	position: absolute;
+	top: 0;
+	left: 35%;
+	overflow: hidden;	
+}
+#carousel div{
+	position: relative;
+	left: 799px;
+	float: left;
+}
+#carousel div img{
+	width: 100px;
+	height: 100px;
+}
+#carousel div h2{
+	margin-top: 30px;
+	float: right;
+}
+.menu{
+	background-image:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,1) 50% , rgba(0,0,0,0.9));
+	opacity: 0.6;
+	text-align: right;
+	z-index: 1;
+
+}
+.menu #collapse{
+	display: none;
+}
+.menu li{
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 25px;
+}
+.menu li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: white;
+	letter-spacing: 5px;
+	transition: font-size 0.3s;
+}
+.menu li a:hover{
+	color: orange;
+	font-size: 20px;
+}
+@keyframes bd{
+	0%{background-size: 100% 100%;}
+	100%{background-size: 110% 110%;}
+}
+#header .banner{
+	background-image: url("../images/contact.jpeg");
+	animation:bd 15s linear alternate infinite;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 100%;
+}
+.banner #textArea{
+	background: rgba(0,0,0,0.6);
+	height: 250px;
+	padding-top: 10%;
+}
+ .banner #textArea h1{
+	text-align: center;
+	color: orange;
+	font-family: georgia sans-serif;
+	font-size: 7ex;
+	
+}
+.banner #textArea p{
+	color: white;
+	text-align: center;
+	font-family: courier;
+	margin: 40px 0 40px 25%;
+	width: 50%;
+}
+#wrapper .contacts{
+	padding: 0 0 10% 5%;
+}
+#wrapper .contacts:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+#wrapper .contacts div{
+	width: 25%;
+	float: left;
+	margin-left: 5%;
+}
+#wrapper .contacts div img{
+	margin: 0 0 20px 40%;
+}
+#wrapper .contacts div h3{
+	text-align: center;
+	margin-bottom: 20px;
+}
+#wrapper .contacts div p{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.footer{
+	padding-top: 2%;
+	padding-left: 2%;
+	column-count:3;
+	column-rule: 1px,solid,white;
+	column-width:100px;
+	max-height: 200px;
+	background: rgba(0,0,0,0.8);
+}
+.footer a{
+	display: block;
+	text-decoration: none;
+	margin:16px 20px;
+	color: white;
+	font-size: 20px;	
+}
+#copywright{
+	background: black;
+	color: white;
+	padding: 16px 26px;
+	text-align: center;
+}
+
+

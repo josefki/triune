@@ -1,0 +1,151 @@
+<!Doctype>
+<html>
+	<head>
+		<title>Final touch</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="website design,development and maintenance">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#collapse").click(function(){
+					if ($("#collapse").text()=="MENU") {
+						$("#collapse").text("CLOSE");
+						sh();
+					}else if ($("#collapse").text()=="CLOSE"){
+						$("#collapse").text("MENU");
+						hi();
+					}
+				});
+				function sh(){
+					$(".menu").css("height","40%");
+				}
+				function hi(){
+					$(".menu").css("height","50px");
+				}
+				function animate(){
+					var myleft;
+					$("#inside").animate({
+						left: "250px"}
+						,500,function(){
+							setTimeout(function(){
+								$("#inside").animate({
+								left: "-345px"
+							}, 500, function(){
+								$("#inside").css("left","799px");
+								if($("#inside img").attr("src") == "images/res.png"){
+									$("#inside h2").html("this is it");
+									$("#inside img").attr("src","images/cool.jpeg");
+								}
+								else{
+									$("#inside h2").html("Responsive web designs");
+									$("#inside img").attr("src","images/res.png");
+								}
+							})}, 1200);
+						});
+				}
+				setInterval(animate, 100);
+				if($(window).width()>=786){
+					$(document).scroll(function(){
+					if ($(document).scrollTop()>$(".top-bar").height()) {
+						$(".menu").css({"position":"fixed","width":"100%","top":"0", "right":"0"});
+						$("#get").css("top","88%");
+						$("#wrapper div").css("margin-top","100px");
+					}else if ($(document).scrollTop()<$(".top-bar").height()){
+						$(".menu").css({"position":"static","width":"100%","opacity":"0.8"});
+						$("#get").css("top","88%");
+						$("#wrapper div").css("margin-top","220px");
+					}
+				});
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" media="screen and (min-width:786px)" href="css/fins.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width:785px)" href="css/styles-sm.css">
+	</head>
+	<body>
+		<div id="header">
+			<div class="top-bar">
+			<h1>web designers pro</h1>
+				<div id="carousel">
+					<div id="inside">
+					<h2>Responsive web designs</h2><img src="images/res.png" alt="" ></div>
+
+				</div>
+			</div>
+			<div class="menu">
+					<li><a href="#" id="collapse" >MENU</a></li>
+					<li lang="item"><a href="index.html" >Home</a></li>
+					<li lang="item"><a href="service.html" >Services</a></li>
+					<li lang="item"><a href="contact.html" >Contact</a></li>
+			</div>
+			<div class="banner" style="background-image:url(images/banner2.jpg)">
+				<div id="textArea"><h1>WE WOULD LOVE TO MEET YOUR NEED</h1>
+				</div>
+				<div id="call">
+					<a href="">SCHEDULE A MEETING</a>
+					<a href="">DOWNLOAD BRONCHURE</a>
+				</div>	
+			</div>
+		</div>
+		<div id="wrapper">
+			<h1>OUR SERVICES</h1>
+			<section class="services">
+				<article><img src="images/web.jpg"><h3>Website Design and Development</h3>
+				<p>Responsive, interactive, optimized and timely delivered websites at a fair price starting from as low as R3000..</p>
+				<a href="">Proceed</a></article>
+				<article><img src="images/mainte.png">
+				<h3>Website maintenance and SEO</h3>
+				<p>Regular monitoring of your website is a must for keeping your business running smoothly. check out our packages starting from R1000 p/m</p>
+				<a href="">Proceed</a></article>
+				<article>
+					<img src="images/online.jpeg">
+					<h3>Online marketing</h3>
+					<p>Boost your market share by reaching an ocean of potential customers online. We offer initial free marketing campaigns to build your trust..</p>
+					<a href="">Proceed</a></article>
+				</article>
+			</section>
+			<section class="services">
+				<article>
+					<img src="images/mobile.png">
+					<h3>Go Mobile</h3>
+					<p>Lets transform your website application into a moile appliaction for your customers to reach you even while on the move</p>
+					<a href="">Proceed</a></article>
+				</article>
+				<article><img src="images/learn.jpeg">
+					<h3>Learn Web development</h3>
+					<p>If you are an aspiring tech geek and you want to learn the egines that run all sorts of websites check out our online courses</p>
+					<a href="">Proceed</a></article></article>
+				<article>
+					<img src="images/cons.jpeg">
+					<h3>Consultation</h3>
+					<p>Consultation is a free added service to our esteemed customers who have signed up for our monthly newsletter.You want toin the family? Next click</p>
+					<a href="">Proceed</a>
+				</article>
+			</section class="services">
+			<section class="overview">
+				<article>
+					<h2>OVERVIEW</h2>
+					<img src="images/overview.png">
+					<p>The increasing usage of the Internet today has given Entrepreneaurs an opportunity to reach the then unreachable market. South Africa alone has 21-million internet users (the vast majority of which are using mobile) and recent research shows that 40% of the population will go online this year. These may seem as useless figures to some but to an insightful entrepreneure this is a big catch.</p>
+				</article>
+			</section>
+			<section class="business">
+				<img src="images/business.PNG">
+				<h1>Time is money</h1>
+				<p>There has never been any right time than now for your business to conqure the market</p>
+				<a href="contact">Contact Us</a>
+			</section>
+		</div>
+		<div class="footer">
+		<a href="services.com">Terms and condition</a>
+		<a href="goods.com">Services</a>
+		<a href="">About Us</a>
+		<a href="">Testimonials</a>
+		<a href="">Marketing strategies</a>
+		<a href="">Contact Us</a>
+		<a href="">Best practices</a>
+		<a href="">Sign up</a>
+		</div>
+		<div id="copywright">Copyright &copy; Kifo marketing solutions. All rights reserved </div>
+	</body>
+</html>
